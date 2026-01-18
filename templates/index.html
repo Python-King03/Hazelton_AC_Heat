@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="hero">
+        <form method="post" action="/contact" class="overlay">
+            <fieldset>
+                <legend>Contact Us</legend>
+                <label for="fname">First Name</label>
+                <input name="fname" type="text">
+                <label for="lname">Last Name</label>
+                <input name="lname" type="text">
+                <label for="email">Email</label>
+                <input name="email" type="email">
+                <label for="phone">Phone</label>
+                <input name="phone" type="tel">
+                <label for="message">How can we help you?</label>
+                <textarea name="message"></textarea>
+                <input type="text" name="bot_field" style="display:none;">
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+        <a href="tel:+18324258114" class="overlay" style="position:absolute;top:0.5rem;right:1ch;">Call Now</a>
+    </div>
+    <div id="carousels">
+        <div id="residential_carousel">
+            <h2 class="banner">Residential</h2>
+            <div class="carousel" style="height:calc(round(up,25ex,2px));color:var(--logo-blue);">
+                <div class="carousel__track">
+                    <div class="carousel__slide"><div class="card">1<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">2<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">3<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">4<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">5<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">6<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">7<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">8<br>1</div></div>
+                    <!-- Dup Cards -->
+                    <div class="carousel__slide"><div class="card">1<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">2<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">3<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">4<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">5<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">6<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">7<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">8<br>2</div></div>
+                </div>
+            </div>
+        </div>
+        <div id="commercial_carousel">
+            <h2 class="banner">Commercial</h2>
+            <div class="carousel" style="height:calc(round(up,25ex,2px));color:var(--logo-red);">
+                <div class="carousel__track">
+                    <div class="carousel__slide"><div class="card">1<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">2<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">3<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">4<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">5<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">6<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">7<br>1</div></div>
+                    <div class="carousel__slide"><div class="card">8<br>1</div></div>
+                    <!-- Dup Cards -->
+                    <div class="carousel__slide"><div class="card">1<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">2<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">3<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">4<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">5<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">6<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">7<br>2</div></div>
+                    <div class="carousel__slide"><div class="card">8<br>2</div></div>
+                </div>
+            </div>
+        </div>
+        <div style="display:inline-flex;align-items:center;justify-content:right;min-width:100%;min-height:3rem;position:absolute;top:0;left:0;background:transparent;">
+            <button id="carousel_button">View Commercial</button>
+        </div>
+    </div>
+{% endblock %}

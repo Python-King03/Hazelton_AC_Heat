@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Family owned and operated, air conditioning and heating company. Based out of Comal County, Texas.">
+        <meta name="keywords" content="HVAC, A/C, Air Conditioning, Heating, San Antonio, Texas, Comal County, Bexar County, Blanco County, Hays County, Guadalupe County, Refrigeration">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Kaden Reece Hazelton (Python King)">
+        <title>Hazelton A/C and Heat</title>
+        <link rel="stylesheet" href="./static/css/main.css">
+        <link rel="icon" href="./static/favicon.ico">
+        <link rel="preconnect" href:="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="./"><img src="./static/logo.svg" alt="Hazelton A/C and Heat Logo"></a>
+            <h1>Hazelton A/C and Heat</h1>
+            <a href="https://natex.org" target="blank"><img src="./static/nate_logo.webp" alt="NATE Logo"></a>
+            <h2 id="license" inert>LICENSE #: TACLB24405E</h2>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <small>Copyright &copy;{{ year }} Hazelton A/C and Heat LLC.</small>
+        </footer>
+        <script src="./static/js/main.js"></script>
+    </body>
+</html>

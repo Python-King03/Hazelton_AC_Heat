@@ -1,0 +1,324 @@
+/*
+Auther: Kaden Reece Hazelton (PythonKing)
+Date:
+*/
+:root {
+    color-scheme: light dark;
+    font-size: clamp(14px, 1.1vw + 0.5rem, 18px);
+/*  Primary                       Slate                       Gray                    */
+    --color-primary-50: #eff6ff;  --color-slate-50: #f8fafc;  --color-gray-50: #f9fafb;
+    --color-primary-100: #dbeafe; --color-slate-100: #f1f5f9; --color-gray-100: #f3f4f6;
+    --color-primary-200: #bfdbfe; --color-slate-200: #e2e8f0; --color-gray-200: #e5e7eb;
+    --color-primary-300: #93c5fd; --color-slate-300: #cbd5e1; --color-gray-300: #d1d5db;
+    --color-primary-400: #60a5fa; --color-slate-400: #94a3b8; --color-gray-400: #9ca3af;
+    --color-primary-500: #3b82f6; --color-slate-500: #64748b; --color-gray-500: #6b7280;
+    --color-primary-600: #2563eb; --color-slate-600: #475569; --color-gray-600: #4b5563;
+    --color-primary-700: #1d4ed8; --color-slate-700: #334155; --color-gray-700: #374151;
+    --color-primary-800: #1e40af; --color-slate-800: #1e293b; --color-gray-800: #1f2937;
+    --color-primary-900: #1e3a8a; --color-slate-900: #0f172a; --color-gray-900: #111827;
+    --color-primary-950: #172554; --color-slate-950: #020617; --color-gray-950: #030712;
+/*  Zinc                       Neutral                       Stone                    */
+    --color-zinc-50: #fafafa;  --color-neutral-50: #fafafa;  --color-stone-50: #fafaf9;
+    --color-zinc-100: #f4f4f5; --color-neutral-100: #f5f5f5; --color-stone-100: #f5f5f4;
+    --color-zinc-200: #e4e4e7; --color-neutral-200: #e5e5e5; --color-stone-200: #e7e5e4;
+    --color-zinc-300: #d4d4d8; --color-neutral-300: #d4d4d4; --color-stone-300: #d6d3d1;
+    --color-zinc-400: #a1a1aa; --color-neutral-400: #a3a3a3; --color-stone-400: #a8a29e;
+    --color-zinc-500: #71717a; --color-neutral-500: #737373; --color-stone-500: #78716c;
+    --color-zinc-600: #52525b; --color-neutral-600: #525252; --color-stone-600: #57534e;
+    --color-zinc-700: #3f3f46; --color-neutral-700: #404040; --color-stone-700: #44403c;
+    --color-zinc-800: #27272a; --color-neutral-800: #262626; --color-stone-800: #292524;
+    --color-zinc-900: #18181b; --color-neutral-900: #171717; --color-stone-900: #1c1917;
+    --color-zinc-950: #09090b; --color-neutral-950: #0a0a0a; --color-stone-950: #0c0a09;
+/*  Red                       Orange                       Amber                    */
+    --color-red-50: #fef2f2;  --color-orange-50: #fff7ed;  --color-amber-50: #fffbeb;
+    --color-red-100: #fee2e2; --color-orange-100: #ffedd5; --color-amber-100: #fef3c7;
+    --color-red-200: #fecaca; --color-orange-200: #fed7aa; --color-amber-200: #fde68a;
+    --color-red-300: #fca5a5; --color-orange-300: #fdba74; --color-amber-300: #fcd34d;
+    --color-red-400: #f87171; --color-orange-400: #fb923c; --color-amber-400: #fbbf24;
+    --color-red-500: #ef4444; --color-orange-500: #f97316; --color-amber-500: #f59e0b;
+    --color-red-600: #dc2626; --color-orange-600: #ea580c; --color-amber-600: #d97706;
+    --color-red-700: #b91c1c; --color-orange-700: #c2410c; --color-amber-700: #b45309;
+    --color-red-800: #991b1b; --color-orange-800: #9a3412; --color-amber-800: #92400e;
+    --color-red-900: #7f1d1d; --color-orange-900: #7c2d12; --color-amber-900: #78350f;
+    --color-red-950: #450a0a; --color-orange-950: #431407; --color-amber-950: #451a03;
+/*  Yellow                       Lime                       Green                    */
+    --color-yellow-50: #fefce8;  --color-lime-50: #f7fee7;  --color-green-50: #f0fdf4;
+    --color-yellow-100: #fef9c3; --color-lime-100: #ecfccb; --color-green-100: #dcfce7;
+    --color-yellow-200: #fef08a; --color-lime-200: #d9f99d; --color-green-200: #bbf7d0;
+    --color-yellow-300: #fde047; --color-lime-300: #bef264; --color-green-300: #86efac;
+    --color-yellow-400: #facc15; --color-lime-400: #a3e635; --color-green-400: #4ade80;
+    --color-yellow-500: #eab308; --color-lime-500: #84cc16; --color-green-500: #22c55e;
+    --color-yellow-600: #ca8a04; --color-lime-600: #65a30d; --color-green-600: #16a34a;
+    --color-yellow-700: #a16207; --color-lime-700: #4d7c0f; --color-green-700: #15803d;
+    --color-yellow-800: #854d0e; --color-lime-800: #3f6212; --color-green-800: #166534;
+    --color-yellow-900: #713f12; --color-lime-900: #365314; --color-green-900: #14532d;
+    --color-yellow-950: #422006; --color-lime-950: #1a2e05; --color-green-950: #052e16;
+/*  Emerald                       Teal                       Cyan                    */
+    --color-emerald-50: #ecfdf5;  --color-teal-50: #f0fdfa;  --color-cyan-50: #ecfeff;
+    --color-emerald-100: #d1fae5; --color-teal-100: #ccfbf1; --color-cyan-100: #cffafe;
+    --color-emerald-200: #a7f3d0; --color-teal-200: #99f6e4; --color-cyan-200: #a5f3fc;
+    --color-emerald-300: #6ee7b7; --color-teal-300: #5eead4; --color-cyan-300: #67e8f9;
+    --color-emerald-400: #34d399; --color-teal-400: #2dd4bf; --color-cyan-400: #22d3ee;
+    --color-emerald-500: #10b981; --color-teal-500: #14b8a6; --color-cyan-500: #06b6d4;
+    --color-emerald-600: #059669; --color-teal-600: #0d9488; --color-cyan-600: #0891b2;
+    --color-emerald-700: #047857; --color-teal-700: #0f766e; --color-cyan-700: #0e7490;
+    --color-emerald-800: #065f46; --color-teal-800: #115e59; --color-cyan-800: #155e75;
+    --color-emerald-900: #064e3b; --color-teal-900: #134e4a; --color-cyan-900: #164e63;
+    --color-emerald-950: #022c22; --color-teal-950: #042f2e; --color-cyan-950: #083344;
+/*  Sky                       Blue                       Indigo                    */
+    --color-sky-50: #f0f9ff;  --color-blue-50: #eff6ff;  --color-indigo-50: #eef2ff;
+    --color-sky-100: #e0f2fe; --color-blue-100: #dbeafe; --color-indigo-100: #e0e7ff;
+    --color-sky-200: #bae6fd; --color-blue-200: #bfdbfe; --color-indigo-200: #c7d2fe;
+    --color-sky-300: #7dd3fc; --color-blue-300: #93c5fd; --color-indigo-300: #a5b4fc;
+    --color-sky-400: #38bdf8; --color-blue-400: #60a5fa; --color-indigo-400: #818cf8;
+    --color-sky-500: #0ea5e9; --color-blue-500: #3b82f6; --color-indigo-500: #6366f1;
+    --color-sky-600: #0284c7; --color-blue-600: #2563eb; --color-indigo-600: #4f46e5;
+    --color-sky-700: #0369a1; --color-blue-700: #1d4ed8; --color-indigo-700: #4338ca;
+    --color-sky-800: #075985; --color-blue-800: #1e40af; --color-indigo-800: #3730a3;
+    --color-sky-900: #0c4a6e; --color-blue-900: #1e3a8a; --color-indigo-900: #312e81;
+    --color-sky-950: #082f49; --color-blue-950: #172554; --color-indigo-950: #1e1b4b;
+/*  Violet                       Purple                       Fuchsia                    */
+    --color-violet-50: #f5f3ff;  --color-purple-50: #faf5ff;  --color-fuchsia-50: #fdf4ff;
+    --color-violet-100: #ede9fe; --color-purple-100: #f3e8ff; --color-fuchsia-100: #fae8ff;
+    --color-violet-200: #ddd6fe; --color-purple-200: #e9d5ff; --color-fuchsia-200: #f5d0fe;
+    --color-violet-300: #c4b5fd; --color-purple-300: #d8b4fe; --color-fuchsia-300: #f0abfc;
+    --color-violet-400: #a78bfa; --color-purple-400: #c084fc; --color-fuchsia-400: #e879f9;
+    --color-violet-500: #8b5cf6; --color-purple-500: #a855f7; --color-fuchsia-500: #d946ef;
+    --color-violet-600: #7c3aed; --color-purple-600: #9333ea; --color-fuchsia-600: #c026d3;
+    --color-violet-700: #6d28d9; --color-purple-700: #7e22ce; --color-fuchsia-700: #a21caf;
+    --color-violet-800: #5b21b6; --color-purple-800: #6b21a8; --color-fuchsia-800: #86198f;
+    --color-violet-900: #4c1d95; --color-purple-900: #581c87; --color-fuchsia-900: #701a75;
+    --color-violet-950: #2e1065; --color-purple-950: #3b0764; --color-fuchsia-950: #4a044e;
+/*  Pink                       Rose                       Logo Red                 Logo Blue              */
+    --color-pink-50: #fdf2f8;  --color-rose-50: #fff1f2;  --logo-red: #ff3131;     --logo-blue: #00a7dd;
+    --color-pink-100: #fce7f3; --color-rose-100: #ffe4e6; --logo-red-50: #ffe5e5;  --logo-blue-50: #e5f9ff;
+    --color-pink-200: #fbcfe8; --color-rose-200: #fecdd3; --logo-red-100: #ffcccc; --logo-blue-100: #ccf2ff;
+    --color-pink-300: #f9a8d4; --color-rose-300: #fda4af; --logo-red-200: #ff9999; --logo-blue-200: #99e6ff;
+    --color-pink-400: #f472b6; --color-rose-400: #fb7185; --logo-red-300: #ff6666; --logo-blue-300: #66d9ff;
+    --color-pink-500: #ec4899; --color-rose-500: #f43f5e; --logo-red-400: #ff3333; --logo-blue-400: #33ccff;
+    --color-pink-600: #db2777; --color-rose-600: #e11d48; --logo-red-500: #ff0000; --logo-blue-500: #00bfff;
+    --color-pink-700: #be185d; --color-rose-700: #be123c; --logo-red-600: #cc0000; --logo-blue-600: #0099cc;
+    --color-pink-800: #9d174d; --color-rose-800: #9f1239; --logo-red-700: #990000; --logo-blue-700: #007399;
+    --color-pink-900: #831843; --color-rose-900: #881337; --logo-red-800: #660000; --logo-blue-800: #004d66;
+    --color-pink-950: #500724; --color-rose-950: #4c0519; --logo-red-900: #330000; --logo-blue-900: #002633;
+    /* Base */                                            --logo-red-950: #240000; --logo-blue-950: #001b24;
+    --color-black: var(--color-neutral-950);
+    --color-white: #ffffff;
+}
+* {
+    color: light-dark(black, white);
+    background-color: light-dark(var(--logo-blue-100), var(--color-neutral-900));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:none;
+    font-family: "Georama", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.banner {
+    width: 100%;
+    height: fit-content;
+    background-color: light-dark(var(--logo-blue-300), var(--logo-blue-700));
+    text-align: center;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px;
+}
+h2.banner {
+    padding: 0.5ch;
+    font-size: 1.25rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3/4;
+    height:100%;
+    background-color: light-dark(var(--logo-blue), var(--color-neutral-600));
+    border: 1px solid light-dark(var(--logo-blue), var(--color-neutral-400));
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px;
+    color: inherit;
+    font-size: 1rem;
+    * {
+        background-color: transparent;
+    }
+}
+@keyframes carousel-scroll {
+    from { transform: translate(0); }
+    to { transform: translate(-50%); }
+}
+.carousel {
+    font-size: 1rem;
+    margin-top: 2ex;
+    margin-bottom:2ex;
+    overflow: hidden;
+    inline-size: 100%;
+    anchor-name: --carousel;
+    color: inherit;
+    > .carousel__track {
+        display:flex;
+        gap: calc(round(up, 2ch, 2px));
+        padding-inline: calc(round(up, 2ch, 2px)/2);
+        width: max-content;
+        height: 100%;
+        animation: carousel-scroll 30s linear infinite;
+        color: inherit;
+        > .carousel__slide {
+            width:auto;
+            height: 100%;
+            color: inherit;
+        }
+    }
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    min-height: 30rem;
+    @media all and (prefers-color-scheme: light) {
+        background-image: url("../light_hero.jpg");
+    }
+    @media all and (prefers-color-scheme: dark) {
+        background-image: url("../dark_hero.jpg");
+    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.overlay {
+    padding: 1ch;
+    margin: 2ch;
+    background-color: light-dark(var(--logo-blue-300), var(--color-neutral-800));
+    opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 1px;
+}
+a.overlay {
+    width: fit-content;
+    height: fit-content;
+    font-size:1.2rem;
+}
+form.overlay {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 0.75ch groove light-dark(var(--logo-blue-200), var(--color-neutral-700));
+    font-size: 1rem;
+    * {
+        background: transparent;
+    }
+    button {
+        width: 12ch;
+        background-color: light-dark(var(--logo-blue), var(--color-neutral-600));
+        border: 0.33ch outset light-dark(var(--logo-blue-500), var(--color-neutral-900));
+        font-size: 1.25rem;
+    }
+    button:active {
+        background-color: light-dark(var(--logo-blue-700), var(--color-neutral-700));
+        border: 0.33ch inset light-dark(var(--logo-blue-950), var(--color-neutral-950));
+    }
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0;
+        * {
+            margin: 0.2rem;
+            padding: 0;
+        }
+    }
+    label {
+        font-size: 1.5rem;
+    }
+    legend {
+        width: 100%;
+        border-bottom: 0.2rem solid light-dark(var(--logo-blue), var(--logo-red));
+        text-align: center;
+        font-size: 2rem;
+    }
+    input,textarea {
+        width: 100%;
+        border: 0.5ch inset light-dark(var(--logo-blue-400), var(--color-neutral-900));
+        background-color: light-dark(var(--logo-blue-600), var(--color-neutral-800));
+        resize:none;
+        font-size:1rem;
+    }
+}
+#carousels {
+    position:relative;
+}
+#carousel_button {
+    margin-left: 1ch;
+    margin-right: 1ch;
+    padding: 0.4ch;
+    border: 0.4ch outset light-dark(white, var(--color-neutral-800));
+    font-size:1rem;
+}
+#commercial_carousel {
+    display:none;
+    & .banner {
+        min-height: 3rem;
+        background-color: light-dark(var(--logo-red-300), var(--logo-red-700));
+    }
+}
+#residential_carousel .banner {
+    min-height: 3rem;
+    background-color: light-dark(var(--logo-blue-300), var(--logo-blue-700));
+}
+a {
+    color: light-dark(black, white);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 1px;
+    * {
+        background-color: transparent;
+    }
+    h1 {
+        margin-left: 1ch;
+        margin-right: 1ch;
+        font-size: 2.5rem;
+    }
+    h2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    img {
+        width:auto;
+        height:6rem;
+        margin: 1ch;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+}
+footer {
+    margin-top: 1rem;
+    float: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 1px;
+}
+small {
+    background-color: transparent;
+    font-size: smaller;
+}
