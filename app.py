@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from ses_mailer import send_lead_email
 import datetime
 
 app = Flask(__name__)
@@ -12,6 +13,9 @@ def contact_get():
 
 @app.post("/contact")
 def contact_post():
+    if (request.form.get("bot_field") or "").strip():
+        return redirect(url_for("contact_get")
+
     fname = request.form.get("fname", "").strip()
     lname = request.form.get("lname", "").strip()
     email = request.form.get("email", "").strip()
@@ -22,9 +26,15 @@ def contact_post():
     if not fname or not lname or not email or not message:
         return "Invalid submission", 400
 
-    # TODO: send email (next step)
-    print("CONTACT FORM SUBMISSION:")
-    print(fname, lname, email, phone, message)
+    subject = f"New website lead: {fname} {lname}"
+    body = (
+        f"Name: {fname} {lname}\n",
+        f"Email: {email}\n",
+        f"Phone: {phone}\n\n",
+        f"Message:\n{message}\n",
+    )
+
+    send_lead_email(subject=subject, body=body, reply_to=email)
 
     return redirect(url_for("contact_get"))
 
