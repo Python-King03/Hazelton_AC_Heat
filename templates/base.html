@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Family owned and operated, air conditioning and heating company. Based out of Comal County, Texas.">
-        <meta name="keywords" content="Heat Pump, HVAC, A/C, Air Conditioning, Heating, San Antonio, Texas, Comal County, Bexar County, Blanco County, Hays County, Guadalupe County, Refrigeration, Ice Machines">
+        <meta name="keywords" content="Heat Pump, HVAC, A/C, Air Conditioning, Heating,
+            San Antonio, Texas, Atascosa County, Bandara County, Bexar County, Blanco County, Comal County, Guadalupe County, Hays County, Kendall County, Meadina County, Wilson County,
+            Refrigeration, Ice Machines">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Kaden Reece Hazelton (Python King)">
         <title>Hazelton A/C and Heat</title>
@@ -15,7 +17,13 @@
     </head>
     <body>
         <header>
-            <a href="./"><img src="./static/logo.svg" alt="Hazelton A/C and Heat Logo"></a>
+            <a href="./">
+                <picture>
+                    <source srcset="./static/light_logo.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./static/dark_logo.svg" media="(prefers-color-scheme: dark)">
+                    <img src="./static/dark_logo.svg" alt="">
+                </picture>
+            </a>
             <h1>Hazelton A/C and Heat</h1>
             <a href="https://natex.org" target="blank"><img src="./static/nate_logo.webp" alt="NATE Logo"></a>
             <h2 id="license" inert>LICENSE #: TACLB24405E</h2>

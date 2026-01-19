@@ -107,7 +107,7 @@ Date:
 }
 * {
     color: light-dark(black, white);
-    background-color: light-dark(var(--logo-blue-100), var(--color-neutral-900));
+    background-color: light-dark(var(--logo-blue-400), var(--color-neutral-900));
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -122,14 +122,24 @@ Date:
 .banner {
     width: 100%;
     height: fit-content;
-    background-color: light-dark(var(--logo-blue-300), var(--logo-blue-700));
     text-align: center;
     align-content: center;
     box-shadow: rgba(0, 0, 0, 0.10) 0 2px;
+    padding: 0.5ch;
+}
+h1.banner {
+    font-size: 2rem;
+    background-color: light-dark(var(--logo-blue-300), var(--logo-red-600));
 }
 h2.banner {
-    padding: 0.5ch;
+    color: light-dark(var(--logo-blue), var(--logo-red));
+    font-size: 1.5rem;
+    background-color: light-dark(var(--color-neutral-600), var(--color-neutral-600));
+}
+h3.banner {
+    color: light-dark(var(--logo-blue), var(--logo-red-500));
     font-size: 1.25rem;
+    background-color: light-dark(var(--color-neutral-700), var(--color-neutral-700));
 }
 .card {
     display: flex;
@@ -174,6 +184,16 @@ h2.banner {
         }
     }
 }
+.clist {
+    width:100%;
+    height: fit-content;
+    justify-items: center;
+    >li {
+        color: light-dark(var(--logo-red), var(--logo-blue));
+        background-color: transparent;
+        list-style: circle inside;
+    }
+}
 .hero {
     display: flex;
     flex-direction: row;
@@ -199,7 +219,10 @@ h2.banner {
 a.overlay {
     width: fit-content;
     height: fit-content;
-    font-size:1.2rem;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1ch;
 }
 form.overlay {
     display: flex;
@@ -309,6 +332,10 @@ main {
     display: flex;
     flex-direction: column;
     min-height: fit-content;
+    >p {
+        padding: 3ch;
+        background-color: light-dark(var(--logo-blue), var(--color-neutral-700));
+    }
 }
 footer {
     margin-top: 1rem;
