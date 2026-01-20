@@ -94,17 +94,16 @@ h3.banner {
     flex-direction: row;
     position: relative;
     min-height: 30rem;
-    background: url("../hero.webp") repeat-x;
-    background-size: auto 100%;
+    background: black url("../hero.webp") repeat-x;
     will-change: background-position;
     animation: hero_bg_scroll 45s linear infinite;
 }
 @keyframes hero_bg_scroll {
     from {
-        background-position: 0 0;
+        background-position: 0 center;
     }
     to {
-        background-position: -3238px 0;
+        background-position: -3238px center;
     }
 }
 .overlay {
